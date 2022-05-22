@@ -4,7 +4,7 @@ import countries from '../../data'
 import { TranslateContext } from '../Context/ContextTranslate'
 
 function SelectLang(props) {
-    const { state, dispath } = useContext(TranslateContext)
+    const { dispath } = useContext(TranslateContext)
     return (
         <>
             <select

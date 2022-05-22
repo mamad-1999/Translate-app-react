@@ -1,5 +1,5 @@
-import axios from 'axios'
 import React, { createContext, useReducer } from 'react'
+import axios from 'axios'
 
 const initialState = {
     languageFrom: 'en-GB',
@@ -34,7 +34,16 @@ const reducer = (state, action) => {
             }
         case "TRANSLATE_REQUEST":
             state.textTo = 'در حال ترجمه...'
-            fetchData(state.languageFrom, state.languageTo, state.textFrom, action.payload)
+            if (state.textFrom) {
+                fetchData(
+                    state.languageFrom,
+                    state.languageTo,
+                    state.textFrom,
+                    action.payload
+                )
+            } else {
+                state.textTo = 'لطفا متن خود را وارد کنید'
+            }
             return {
                 ...state,
             }

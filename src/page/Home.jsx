@@ -13,14 +13,30 @@ function Home() {
             {/* <Header /> */}
             <main className='main-section'>
                 <div className='select_box'>
-                    <SelectLang lang={state.languageFrom} type={"LANGUAGE_FROM"} />
+                    <SelectLang
+                        lang={state.languageFrom}
+                        type={"LANGUAGE_FROM"} />
                     <RiArrowLeftRightLine
-                        onClick={() => dispath({ type: "CHANGE" })} className='arrow' />
-                    <SelectLang lang={state.languageTo} type={"LANGUAGE_To"} />
+                        onClick={() => dispath({ type: "CHANGE" })}
+                        className='arrow' />
+                    <SelectLang
+                        lang={state.languageTo}
+                        type={"LANGUAGE_To"} />
                 </div>
                 <div className="textbox_container">
-                    <TextArea type={"TEXT_FROM"} lang={state.languageFrom} text={state.textFrom} holdertext={'متن خود را وارد کنید'} />
-                    <TextArea type={"TEXT_TO"} lang={state.languageTo} text={state.textTo} disabled={true} holdertext={'ترجمه...'} />
+                    <TextArea
+                        type={"TEXT_FROM"}
+                        lang={state.languageFrom}
+                        text={state.textFrom}
+                        holdertext={'متن خود را وارد کنید'}
+                    />
+                    <TextArea
+                        type={"TEXT_TO"}
+                        lang={state.languageTo}
+                        text={state.textTo}
+                        disabled={true}
+                        holdertext={'ترجمه...'}
+                    />
                 </div>
                 <div className="btn_box">
                     <button
