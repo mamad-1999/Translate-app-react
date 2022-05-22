@@ -3,9 +3,9 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px 30px;
-    background-color: #2d3037 ;
+    background: linear-gradient(140deg, #0091ea 10%, #00b0ff);
 }
 
-.header span{
+.header span {
     font-size: 20px;
 }

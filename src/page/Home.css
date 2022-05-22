@@ -2,3 +2,21 @@
 /* #424242 */
 /* #616161 */
 /* #2d3037 */
+
+.main-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 16px;
+}
+
+.textbox_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}

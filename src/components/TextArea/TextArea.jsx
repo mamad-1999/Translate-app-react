@@ -1,9 +1,11 @@
 import React from 'react'
 import './TextArea.css'
 
-function TextArea() {
+function TextArea({ holdertext }) {
     return (
-        <div>TextArea</div>
+        <div className='text_box'>
+            <textarea placeholder={holdertext}></textarea>
+        </div>
     )
 }
 
