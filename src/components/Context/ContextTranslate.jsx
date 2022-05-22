@@ -43,6 +43,19 @@ const reducer = (state, action) => {
             return {
                 ...state,
             }
+        case "CHANGE":
+            //save one text and one lang for Exchange
+            const textOne = state.textFrom
+            const langOne = state.languageFrom
+            //Exchange 
+            state.languageFrom = state.languageTo
+            state.languageTo = langOne
+            state.textFrom = state.textTo
+            state.textTo = textOne
+
+            return {
+                ...state
+            }
         default:
             return state
     }
@@ -63,6 +76,8 @@ const fetchData = async (langFrom, langTo, textFrom, dispath) => {
     const textTranslate = await axios.get(url)
         .then(response => {
             return response.data.responseData.translatedText
+        }).catch(err => {
+            console.log(err);
         })
 
     if (textTranslate) {
