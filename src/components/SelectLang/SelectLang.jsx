@@ -7,7 +7,7 @@ function SelectLang() {
         <>
             <select>
                 {Object.entries(countries).map((country, index) => (
-                <option key={index} selected value={country[0]}>{country[1]}</option>
+                <option key={index} value={country[0]}>{country[1]}</option>
                 ))}
             </select>
         </>

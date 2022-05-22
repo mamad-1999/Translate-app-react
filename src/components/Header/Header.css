@@ -1,9 +1,13 @@
 .header {
     width: 100%;
-    max-width: 1200px;
+    background: linear-gradient(140deg, #0091ea 10%, #00b0ff);
+}
+
+header nav{
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 15px 30px;
-    background: linear-gradient(140deg, #0091ea 10%, #00b0ff);
 }
 
 .header span {
