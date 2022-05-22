@@ -1,9 +1,12 @@
+import ContextTranslate from "./components/Context/ContextTranslate";
 import Home from "./page/Home";
 
 function App() {
   return (
     <>
-      <Home />
+      <ContextTranslate>
+        <Home />
+      </ContextTranslate>
     </>
   );
 }
