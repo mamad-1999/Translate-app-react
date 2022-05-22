@@ -1,9 +1,16 @@
 import React from 'react'
-import './SelectLang.css'
+import './Selectlang.css'
+import countries from '../../data'
 
 function SelectLang() {
     return (
-        <div>SelectLang</div>
+        <>
+            <select>
+                {Object.entries(countries).map((country, index) => (
+                <option key={index} selected value={country[0]}>{country[1]}</option>
+                ))}
+            </select>
+        </>
     )
 }
 
