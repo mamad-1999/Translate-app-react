@@ -8,7 +8,7 @@ import './Home.css'
 function Home() {
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             <main className='main-section'>
                 <div className='select_box'>
                     <SelectLang />
@@ -17,7 +17,10 @@ function Home() {
                 </div>
                 <div className="textbox_container">
                     <TextArea holdertext={'متن خود را وارد کنید'} />
-                    <TextArea holdertext={'ترجمه...'} />
+                    <TextArea disabled={true} holdertext={'ترجمه...'} />
+                </div>
+                <div className="btn_box">
+                    <button className='translate_btn'>ترجمه کن</button>
                 </div>
             </main>
         </div>

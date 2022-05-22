@@ -1,8 +1,7 @@
 .text_box {
     width: 100%;
-    background: linear-gradient(45deg, rgba(14, 132, 199, 1) 0%, rgba(0, 189, 255, 1) 100%);
+    background: #0a55dc;
     border-radius: 15px;
-    box-shadow: -2px 2px 10px rgba(0, 0, 0, .4);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +33,7 @@
     justify-content: end;
     padding: 10px 15px;
     gap: 15px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .text_icon_box span {

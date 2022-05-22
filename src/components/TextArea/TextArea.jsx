@@ -3,10 +3,10 @@ import './TextArea.css'
 import { MdOutlineContentCopy } from 'react-icons/md'
 import { AiOutlineSound } from 'react-icons/ai'
 
-function TextArea({ holdertext }) {
+function TextArea({ holdertext, disabled = false }) {
     return (
         <div className='text_box'>
-            <textarea placeholder={holdertext}></textarea>
+            <textarea disabled={disabled} placeholder={holdertext}></textarea>
             <div className="text_icon_box">
                 <span className='icon'>
                     <MdOutlineContentCopy />
