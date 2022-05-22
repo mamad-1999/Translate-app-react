@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .text_box textarea {
@@ -24,4 +25,30 @@
 .text_box textarea::placeholder {
     color: #eee;
     opacity: .7;
+}
+
+.text_icon_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px 15px;
+    gap: 15px;
+    border-top: 1px solid #eee;
+}
+
+.text_icon_box span {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: rgba(0, 187, 255, 0.692);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.text_icon_box span:hover {
+    opacity: .8;
 }
