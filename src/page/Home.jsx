@@ -3,27 +3,36 @@ import Header from '../components/Header/Header'
 import SelectLang from '../components/SelectLang/SelectLang'
 import TextArea from '../components/TextArea/TextArea'
 import { RiArrowLeftRightLine } from 'react-icons/ri'
-import './Home.css'
 import { TranslateContext } from '../components/Context/ContextTranslate'
+import {
+    Container,
+    SelectLanquage,
+    ExChangeLanquage,
+    TextAreaBox,
+    ButtonBox,
+    TranslateButton,
+} from './Home-css'
 
 function Home() {
     const { state, dispath } = useContext(TranslateContext)
     return (
         <div>
-            {/* <Header /> */}
-            <main className='main-section'>
-                <div className='select_box'>
+            <Header />
+            <Container>
+                <SelectLanquage>
                     <SelectLang
                         lang={state.languageFrom}
                         type={"LANGUAGE_FROM"} />
-                    <RiArrowLeftRightLine
-                        onClick={() => dispath({ type: "CHANGE" })}
-                        className='arrow' />
+                    <ExChangeLanquage>
+                        <RiArrowLeftRightLine
+                            onClick={() => dispath({ type: "CHANGE" })}
+                            className='arrow' />
+                    </ExChangeLanquage>
                     <SelectLang
                         lang={state.languageTo}
                         type={"LANGUAGE_To"} />
-                </div>
-                <div className="textbox_container">
+                </SelectLanquage>
+                <TextAreaBox>
                     <TextArea
                         type={"TEXT_FROM"}
                         lang={state.languageFrom}
@@ -37,14 +46,13 @@ function Home() {
                         disabled={true}
                         holdertext={'ترجمه...'}
                     />
-                </div>
-                <div className="btn_box">
-                    <button
-                        onClick={() => dispath({ type: "TRANSLATE_REQUEST", payload: dispath })}
-                        className='translate_btn'>ترجمه کن
-                    </button>
-                </div>
-            </main>
+                </TextAreaBox>
+                <ButtonBox>
+                    <TranslateButton
+                        onClick={() => dispath({ type: "TRANSLATE_REQUEST", payload: dispath })}>ترجمه کن
+                    </TranslateButton>
+                </ButtonBox>
+            </Container>
         </div>
     )
 }

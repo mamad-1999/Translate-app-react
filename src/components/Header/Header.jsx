@@ -1,15 +1,19 @@
 import React from 'react'
-import './Header.css'
+import {
+    HeaderNav,
+    Nav,
+    Logo,
+} from './Header-css'
 
 function Header() {
     return (
-        <header className='header'>
-            <nav>
-                <div className="logo">
-                    <span>ترجمه</span>
+        <HeaderNav>
+            <Nav>
+                <div>
+                    <Logo>ترجمه</Logo>
                 </div>
-            </nav>
-        </header>
+            </Nav>
+        </HeaderNav>
     )
 }
 

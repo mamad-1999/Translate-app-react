@@ -1,4 +1,6 @@
-.text_box {
+import styled from 'styled-components'
+
+const TextareaBox = styled.div`
     width: 100%;
     background: #0a55dc;
     border-radius: 15px;
@@ -7,9 +9,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
+`
 
-.text_box textarea {
+const Textarea = styled.textarea`
     width: 100%;
     min-height: 200px;
     background: none;
@@ -19,14 +21,14 @@
     color: #fff;
     padding: 20px;
     font-size: 20px;
-}
 
-.text_box textarea::placeholder {
-    color: #eee;
-    opacity: .7;
-}
+    &::placeholder{
+        color: #eee;
+        opacity: .7;
+    }
+`
 
-.text_icon_box {
+const TextareaIconBox = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
@@ -34,10 +36,10 @@
     padding: 10px 15px;
     gap: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
-}
+`
 
-.text_icon_box span {
-    width: 45px;
+const TextareaIcon = styled.span`
+     width: 45px;
     height: 45px;
     border-radius: 50%;
     font-size: 25px;
@@ -46,8 +48,15 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
 
-.text_icon_box span:hover {
-    opacity: .8;
+    &:hover{
+        opacity: .8;
+    }
+`
+
+export {
+    TextareaBox,
+    Textarea,
+    TextareaIconBox,
+    TextareaIcon,
 }

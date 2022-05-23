@@ -1,34 +1,37 @@
 import React, { useContext } from 'react'
-import './TextArea.css'
 import { MdOutlineContentCopy } from 'react-icons/md'
 import { AiOutlineSound } from 'react-icons/ai'
 import { TranslateContext } from '../Context/ContextTranslate'
 import { sound, copy } from '../../func'
+import {
+    TextareaBox,
+    Textarea,
+    TextareaIconBox,
+    TextareaIcon,
+} from './Textarea-css'
 
 function TextArea(props) {
     const { dispath } = useContext(TranslateContext)
     const { holdertext, type, lang, text, disabled = false } = props
 
     return (
-        <div className='text_box'>
-            <textarea
+        <TextareaBox>
+            <Textarea
                 onChange={e => dispath({ type: type, payload: e.target.value })}
                 value={text} disabled={disabled}
                 placeholder={holdertext}>
-            </textarea>
-            <div className="text_icon_box">
-                <span
-                    onClick={() => copy(text)}
-                    className='icon'>
+            </Textarea>
+            <TextareaIconBox>
+                <TextareaIcon
+                    onClick={() => copy(text)}>
                     <MdOutlineContentCopy />
-                </span>
-                <span
-                    onClick={() => sound(text, lang)}
-                    className='icon'>
+                </TextareaIcon>
+                <TextareaIcon
+                    onClick={() => sound(text, lang)}>
                     <AiOutlineSound />
-                </span>
-            </div>
-        </div>
+                </TextareaIcon>
+            </TextareaIconBox>
+        </TextareaBox>
     )
 }
 
