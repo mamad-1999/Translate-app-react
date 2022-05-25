@@ -50,3 +50,7 @@ Start the server
 npm start
 
 ```
+-------
+![Screenshot from 2022-05-25 11-22-02](https://user-images.githubusercontent.com/91375726/170198780-28d32ce0-1deb-49ac-944f-8de3bf1ea6c7.png)
+
+
