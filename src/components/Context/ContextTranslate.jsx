@@ -86,6 +86,7 @@ const fetchData = async (langFrom, langTo, textFrom, dispath) => {
     const url = `https://api.mymemory.translated.net/get?q=${textFrom}&langpair=${langFrom}|${langTo}`
     const textTranslate = await axios.get(url)
         .then(response => {
+            console.log(response)
             return response.data.responseData.translatedText
         }).catch(err => {
             console.log(err);

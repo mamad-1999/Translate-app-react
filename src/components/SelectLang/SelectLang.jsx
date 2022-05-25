@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import countries from '../../data'
+import countries from '../../country'
 import { TranslateContext } from '../Context/ContextTranslate'
 import { Select, Option } from './Select-css'
 
