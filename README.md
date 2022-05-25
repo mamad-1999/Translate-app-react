@@ -13,7 +13,7 @@
 - Support Farsi
 
 ### API
-- [[https://mymemory.translated.net/](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjR6tSYh_r3AhWfgv0HHfyzA_IQFnoECAUQAQ&url=https%3A%2F%2Fmymemory.translated.net%2F&usg=AOvVaw1LzksgzZ-xHdkVqIvlvwIk)](mymemory.translated)
+- [mymemory.translated](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjR6tSYh_r3AhWfgv0HHfyzA_IQFnoECAUQAQ&url=https%3A%2F%2Fmymemory.translated.net%2F&usg=AOvVaw1LzksgzZ-xHdkVqIvlvwIk)
 
 ## [See Website](https://translate-app-react.netlify.app/)
 
