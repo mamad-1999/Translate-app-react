@@ -9,12 +9,11 @@ import {
     SelectLanquage,
     ExChangeLanquage,
     TextAreaBox,
-    ButtonBox,
-    TranslateButton,
 } from './Home-css'
 
 function Home() {
     const { state, dispath } = useContext(TranslateContext)
+
     return (
         <div>
             <Header />
@@ -23,10 +22,10 @@ function Home() {
                     <SelectLang
                         lang={state.languageFrom}
                         type={"LANGUAGE_FROM"} />
-                    <ExChangeLanquage>
-                        <RiArrowLeftRightLine
-                            onClick={() => dispath({ type: "CHANGE" })}
-                            className='arrow' />
+                    <ExChangeLanquage
+                        change={state.isChange}
+                        onClick={() => dispath({ type: "CHANGE" })}>
+                        <RiArrowLeftRightLine />
                     </ExChangeLanquage>
                     <SelectLang
                         lang={state.languageTo}
@@ -37,6 +36,7 @@ function Home() {
                         type={"TEXT_FROM"}
                         lang={state.languageFrom}
                         text={state.textFrom}
+                        first={true}
                         holdertext={'متن خود را وارد کنید'}
                     />
                     <TextArea
@@ -47,11 +47,6 @@ function Home() {
                         holdertext={'ترجمه...'}
                     />
                 </TextAreaBox>
-                <ButtonBox>
-                    <TranslateButton
-                        onClick={() => dispath({ type: "TRANSLATE_REQUEST", payload: dispath })}>ترجمه کن
-                    </TranslateButton>
-                </ButtonBox>
             </Container>
         </div>
     )

@@ -1,8 +1,10 @@
 import React from 'react'
+import Translate from './../../images/Translate.svg'
 import {
     HeaderNav,
     Nav,
-    Logo,
+    LogoTitle,
+    LogoImage,
 } from './Header-css'
 
 function Header() {
@@ -10,7 +12,10 @@ function Header() {
         <HeaderNav>
             <Nav>
                 <div>
-                    <Logo>ترجمه</Logo>
+                    <LogoTitle>ترجمه</LogoTitle>
+                </div>
+                <div>
+                    <LogoImage src={Translate} />
                 </div>
             </Nav>
         </HeaderNav>

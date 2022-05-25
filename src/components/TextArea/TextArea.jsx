@@ -6,13 +6,27 @@ import { sound, copy } from '../../func'
 import {
     TextareaBox,
     Textarea,
+    TextareaFooter,
     TextareaIconBox,
     TextareaIcon,
+    TranslateButton,
+    CopyText,
 } from './Textarea-css'
+import { useState } from 'react'
 
 function TextArea(props) {
+    const [isCopy, setIsCopy] = useState(false)
     const { dispath } = useContext(TranslateContext)
-    const { holdertext, type, lang, text, disabled = false } = props
+    const { holdertext, type, lang, text, first = false, disabled = false } = props
+
+    const copyHandler = () => {
+        setIsCopy(true)
+        copy(text)
+
+        setTimeout(() => {
+            setIsCopy(false)
+        }, 3000);
+    }
 
     return (
         <TextareaBox>
@@ -21,16 +35,23 @@ function TextArea(props) {
                 value={text} disabled={disabled}
                 placeholder={holdertext}>
             </Textarea>
-            <TextareaIconBox>
-                <TextareaIcon
-                    onClick={() => copy(text)}>
-                    <MdOutlineContentCopy />
-                </TextareaIcon>
-                <TextareaIcon
-                    onClick={() => sound(text, lang)}>
-                    <AiOutlineSound />
-                </TextareaIcon>
-            </TextareaIconBox>
+            <TextareaFooter first={first}>
+                {first &&
+                    <TranslateButton
+                        onClick={() => dispath({ type: "TRANSLATE_REQUEST", payload: dispath })}>ترجمه کن
+                    </TranslateButton>}
+                <TextareaIconBox>
+                    {isCopy && <CopyText>کپی شد</CopyText>}
+                    <TextareaIcon
+                        onClick={copyHandler}>
+                        <MdOutlineContentCopy />
+                    </TextareaIcon>
+                    <TextareaIcon
+                        onClick={() => sound(text, lang)}>
+                        <AiOutlineSound />
+                    </TextareaIcon>
+                </TextareaIconBox>
+            </TextareaFooter>
         </TextareaBox>
     )
 }

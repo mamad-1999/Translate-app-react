@@ -6,6 +6,7 @@ const initialState = {
     languageTo: 'fa-IR',
     textFrom: '',
     textTo: '',
+    isChange: false,
 }
 
 export const TranslateContext = createContext()
@@ -61,6 +62,7 @@ const reducer = (state, action) => {
             state.languageTo = langOne
             state.textFrom = state.textTo
             state.textTo = textOne
+            state.isChange = !state.isChange
 
             return {
                 ...state

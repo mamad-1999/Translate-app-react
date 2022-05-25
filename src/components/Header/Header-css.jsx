@@ -7,13 +7,20 @@ const HeaderNav = styled.header`
 
 const Nav = styled.nav`
     width: 100%;
-    max-width: 1000px;
+    max-width: 1350px;
     margin: 0 auto;
-    padding: 15px 30px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
 
-const Logo = styled.span`
+const LogoTitle = styled.span`
     font-size: 20px;
 `
 
-export { HeaderNav, Nav, Logo, }
+const LogoImage = styled.img`
+    width: 40px;
+`
+
+export { HeaderNav, Nav, LogoTitle, LogoImage }

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Select = styled.select`
-    color: #fff;
+    color: #333;
     border: none;
     outline: none;
     font-size: 16px;
