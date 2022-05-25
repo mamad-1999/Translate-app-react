@@ -43,6 +43,7 @@ const TextareaIconBox = styled.div`
     display: flex;
     align-items: center;
     gap: 15px;
+    position: relative;
 `
 
 const TextareaIcon = styled.span`
@@ -62,7 +63,14 @@ const TextareaIcon = styled.span`
 `
 
 const CopyText = styled.span`
-    color: #333;
+    position: absolute;
+    top: -50px;
+    right: -15px;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgba(0, 187, 255, 0.692);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 20px;
 `
 
 const TranslateButton = styled.button`
