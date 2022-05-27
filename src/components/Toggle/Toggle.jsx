@@ -18,7 +18,7 @@ function Toggle() {
     };
 
     return (
-        <LabelToggle htmlFor="toggle">
+        <LabelToggle>
             <ToggleItem isDark={state.isDark}>
                 <IconToggleBox>
                     <Icon>
@@ -29,9 +29,6 @@ function Toggle() {
                     </Icon>
                 </IconToggleBox>
                 <CheckBoxToggle
-                    id="toggle"
-                    name="toggle"
-                    type="checkbox"
                     checked={state.isDark}
                     onChange={toggleState}
                 />
