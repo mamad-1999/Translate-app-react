@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 const TextareaBox = styled.div`
     width: 100%;
-    background: #fff;
+    background: ${({ theme }) => theme.box};
+    color: ${({ theme }) => theme.text};
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -19,12 +20,12 @@ const Textarea = styled.textarea`
     resize: none;
     border: none;
     outline: none;
-    color: #333;
+    color: inherit;
     padding: 20px;
     font-size: 20px;
 
     &::placeholder{
-        color: #333;
+        color: inherit;
         opacity: .7;
     }
 `
@@ -52,6 +53,7 @@ const TextareaIcon = styled.span`
     border-radius: 50%;
     font-size: 25px;
     background-color: rgba(0, 187, 255, 0.692);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -4,21 +4,26 @@ import SelectLang from '../components/SelectLang/SelectLang'
 import TextArea from '../components/TextArea/TextArea'
 import { RiArrowLeftRightLine } from 'react-icons/ri'
 import { TranslateContext } from '../components/Context/ContextTranslate'
+import { GlobalStyle } from "./../index-css";
 import {
     Container,
     SelectLanquage,
     ExChangeLanquage,
-    TextAreaBox,
+    TextAreaBoxContainer,
 } from './Home-css'
+import { lightMode, darkMode } from "./../theme";
+
 
 function Home() {
     const { state, dispath } = useContext(TranslateContext)
 
     return (
         <div>
+            <GlobalStyle
+                theme={state.themeMode === 'dark' ? darkMode : lightMode} />
             <Header />
             <Container>
-                <SelectLanquage>
+                <SelectLanquage theme={state.themeMode === 'dark' ? darkMode : lightMode}>
                     <SelectLang
                         lang={state.languageFrom}
                         type={"LANGUAGE_FROM"} />
@@ -31,7 +36,7 @@ function Home() {
                         lang={state.languageTo}
                         type={"LANGUAGE_To"} />
                 </SelectLanquage>
-                <TextAreaBox>
+                <TextAreaBoxContainer>
                     <TextArea
                         type={"TEXT_FROM"}
                         lang={state.languageFrom}
@@ -46,7 +51,7 @@ function Home() {
                         disabled={true}
                         holdertext={'ترجمه...'}
                     />
-                </TextAreaBox>
+                </TextAreaBoxContainer>
             </Container>
         </div>
     )

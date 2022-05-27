@@ -2,7 +2,13 @@ import React, { useContext } from 'react'
 import { TranslateContext } from '../Context/ContextTranslate';
 import { IoMdMoon } from 'react-icons/io'
 import { BiSun } from 'react-icons/bi'
-import './Toggle.css'
+import {
+    LabelToggle,
+    ToggleItem,
+    CheckBoxToggle,
+    IconToggleBox,
+    Icon,
+} from './Toggle-css'
 
 function Toggle() {
     const { state, dispath } = useContext(TranslateContext);
@@ -12,24 +18,28 @@ function Toggle() {
     };
 
     return (
-        <label className="toggle-wrapper" htmlFor="toggle">
-            <div className={`toggle ${state.isDark ? "enabled" : "disabled"}`}>
-                <span className="hidden">
+        <LabelToggle htmlFor="toggle">
+            <ToggleItem isDark={state.isDark}>
+                {/* <span className="hidden">
                     {state.isDark ? "Enable" : "Disable"}
-                </span>
-                <div className="icons">
-                    <BiSun />
-                    <IoMdMoon />
-                </div>
-                <input
+                </span> */}
+                <IconToggleBox>
+                    <Icon>
+                        <BiSun />
+                    </Icon>
+                    <Icon>
+                        <IoMdMoon />
+                    </Icon>
+                </IconToggleBox>
+                <CheckBoxToggle
                     id="toggle"
                     name="toggle"
                     type="checkbox"
                     checked={state.isDark}
                     onChange={toggleState}
                 />
-            </div>
-        </label>
+            </ToggleItem>
+        </LabelToggle>
     );
 }
 

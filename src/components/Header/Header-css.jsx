@@ -24,6 +24,7 @@ const LogoBox = styled.div`
 
 const LogoTitle = styled.span`
     font-size: 20px;
+    color: #fff;
 `
 
 const LogoImage = styled.img`

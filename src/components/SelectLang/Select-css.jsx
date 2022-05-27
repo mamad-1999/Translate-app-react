@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 const Select = styled.select`
-    color: #333;
     border: none;
     outline: none;
     font-size: 16px;
     background: none;
+    color: inherit;
 
     &::-webkit-scrollbar{
         width: 8px;

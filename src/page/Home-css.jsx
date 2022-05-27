@@ -17,9 +17,9 @@ const SelectLanquage = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    background: ${({ theme }) => theme.box};
     box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 20px;
-    color: #000;
+    color: ${({ theme }) => theme.text};
     border-radius: 10px;
     padding: 15px 16px;
     user-select: none;
@@ -39,7 +39,7 @@ const ExChangeLanquage = styled.span`
     transform: ${props => props.change ? 'rotateY(180deg)' : 'rotate(0)'};
 `
 
-const TextAreaBox = styled.div`
+const TextAreaBoxContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -55,5 +55,5 @@ export {
     Container,
     ExChangeLanquage,
     SelectLanquage,
-    TextAreaBox,
+    TextAreaBoxContainer,
 }

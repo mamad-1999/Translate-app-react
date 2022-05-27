@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { MdOutlineContentCopy } from 'react-icons/md'
 import { AiOutlineSound } from 'react-icons/ai'
 import { TranslateContext } from '../Context/ContextTranslate'
@@ -12,11 +12,11 @@ import {
     TranslateButton,
     CopyText,
 } from './Textarea-css'
-import { useState } from 'react'
+import { lightMode, darkMode } from "./../../theme";
 
 function TextArea(props) {
     const [isCopy, setIsCopy] = useState(false)
-    const { dispath } = useContext(TranslateContext)
+    const { state, dispath } = useContext(TranslateContext)
     const { holdertext, type, lang, text, first = false, disabled = false } = props
 
     const copyHandler = () => {
@@ -29,7 +29,7 @@ function TextArea(props) {
     }
 
     return (
-        <TextareaBox>
+        <TextareaBox theme={state.themeMode === 'dark' ? darkMode : lightMode}>
             <Textarea
                 onChange={e => dispath({ type: type, payload: e.target.value })}
                 value={text} disabled={disabled}
