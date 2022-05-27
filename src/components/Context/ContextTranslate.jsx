@@ -7,12 +7,25 @@ const initialState = {
     textFrom: '',
     textTo: '',
     isChange: false,
+    themeMode: 'light',
+    isDark: false,
 }
 
 export const TranslateContext = createContext()
 
 const reducer = (state, action) => {
     switch (action.type) {
+        case "DARK_MODE":
+            if (state.themeMode === 'light') {
+                state.themeMode = 'dark'
+                state.isDark = true
+            } else {
+                state.themeMode = 'light'
+                state.isDark = false
+            }
+            return {
+                ...state
+            }
         case "LANGUAGE_FROM":
             state.languageFrom = action.payload
             return {
