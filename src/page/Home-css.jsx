@@ -33,10 +33,15 @@ const ExChangeLanquage = styled.span`
     justify-content: center;
     font-size: 24px;
     cursor: pointer;
-    background-color: rgba(0, 187, 255, 0.692);
+    background: linear-gradient(60deg, rgba(58,171,249,1) 0%, rgba(71,152,254,1) 65%);
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
     border-radius: 5px;
     color: #fff;
     transform: ${props => props.change ? 'rotateY(180deg)' : 'rotate(0)'};
+
+    &:hover{
+        opacity: .8;
+    }
 `
 
 const TextAreaBoxContainer = styled.div`

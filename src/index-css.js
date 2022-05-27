@@ -10,12 +10,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: Yekan, Poppins;
 }
 
-:root {
-    --black: #333333;
-    --white: #f5f5f5;
-    --transition: 0.5s ease;
-}
-
 body {
     width: 100%;
     height: 100vh;

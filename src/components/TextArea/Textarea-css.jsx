@@ -52,12 +52,13 @@ const TextareaIcon = styled.span`
     height: 45px;
     border-radius: 50%;
     font-size: 25px;
-    background-color: rgba(0, 187, 255, 0.692);
+    background: linear-gradient(60deg, rgba(58,171,249,1) 0%, rgba(71,152,254,1) 65%);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 10px;
 
     &:hover{
         opacity: .8;
@@ -71,20 +72,25 @@ const CopyText = styled.span`
     padding: 5px 10px;
     color: #fff;
     border-radius: 5px;
-    background-color: rgba(0, 187, 255, 0.692);
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 20px;
+    background: linear-gradient(60deg, rgba(58,171,249,1) 0%, rgba(71,152,254,1) 65%);
+    box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 15px;
 `
 
 const TranslateButton = styled.button`
     width: 150px;
     height: 45px;
-    background: tomato;
+    background: linear-gradient(60deg, rgba(249,58,58,1) 0%, rgba(254,71,71,1) 65%);
     border-radius: 10px;
     outline: none;
     border: none;
     color: #fff;
     font-size: 18px;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 15px;
+
+    &:hover{
+        opacity: .8;
+    }
 `
 
 export {

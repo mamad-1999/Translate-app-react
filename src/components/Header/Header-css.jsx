@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const HeaderNav = styled.header`
     width: 100%;
-    background: #0a55dc;
+    background: rgba(71,152,254,1);
 `
 
 const Nav = styled.nav`
