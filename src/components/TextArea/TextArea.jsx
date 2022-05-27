@@ -12,7 +12,7 @@ import {
     TranslateButton,
     CopyText,
 } from './Textarea-css'
-import { lightMode, darkMode } from "./../../theme";
+import { lightMode, darkMode } from "./../../theme.js";
 
 function TextArea(props) {
     const [isCopy, setIsCopy] = useState(false)

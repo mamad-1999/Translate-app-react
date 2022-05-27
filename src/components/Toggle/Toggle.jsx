@@ -20,9 +20,6 @@ function Toggle() {
     return (
         <LabelToggle htmlFor="toggle">
             <ToggleItem isDark={state.isDark}>
-                {/* <span className="hidden">
-                    {state.isDark ? "Enable" : "Disable"}
-                </span> */}
                 <IconToggleBox>
                     <Icon>
                         <BiSun />

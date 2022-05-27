@@ -11,7 +11,7 @@ import {
     ExChangeLanquage,
     TextAreaBoxContainer,
 } from './Home-css'
-import { lightMode, darkMode } from "./../theme";
+import { lightMode, darkMode } from "./../theme.js";
 
 
 function Home() {
