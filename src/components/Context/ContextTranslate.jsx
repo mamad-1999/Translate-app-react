@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useReducer, useEffect } from 'react'
 import axios from 'axios'
 
 const initialState = {
@@ -18,9 +18,11 @@ const reducer = (state, action) => {
         case "DARK_MODE":
             if (state.themeMode === 'light') {
                 state.themeMode = 'dark'
+                localStorage.setItem('theme', 'dark')
                 state.isDark = true
             } else {
                 state.themeMode = 'light'
+                localStorage.setItem('theme', 'light')
                 state.isDark = false
             }
             return {
@@ -88,6 +90,14 @@ const reducer = (state, action) => {
 
 function ContextTranslate({ children }) {
     const [state, dispath] = useReducer(reducer, initialState)
+
+    useEffect(() => {
+        const themeLocal = localStorage.getItem('theme')
+        if (themeLocal === 'dark') {
+            dispath({ type: "DARK_MODE" })
+        }
+    }, [])
+
     return (
         <TranslateContext.Provider value={{ state, dispath }}>
             {children}
