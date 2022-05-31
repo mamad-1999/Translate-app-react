@@ -4,6 +4,7 @@ import SelectLang from '../components/SelectLang/SelectLang'
 import TextArea from '../components/TextArea/TextArea'
 import { RiArrowLeftRightLine } from 'react-icons/ri'
 import { TranslateContext } from '../components/Context/ContextTranslate'
+import { ThemeContext } from '../components/Context/ContextTheme'
 import { GlobalStyle } from "./../index-css";
 import {
     Container,
@@ -16,14 +17,15 @@ import { lightMode, darkMode } from '../theme'
 
 function Home() {
     const { state, dispath } = useContext(TranslateContext)
+    const { stateTheme } = useContext(ThemeContext)
 
     return (
         <div>
             <GlobalStyle
-                theme={state.themeMode === 'dark' ? darkMode : lightMode} />
+                theme={stateTheme.themeMode === 'dark' ? darkMode : lightMode} />
             <Header />
             <Container>
-                <SelectLanquage theme={state.themeMode === 'dark' ? darkMode : lightMode}>
+                <SelectLanquage theme={stateTheme.themeMode === 'dark' ? darkMode : lightMode}>
                     <SelectLang
                         lang={state.languageFrom}
                         type={"LANGUAGE_FROM"} />

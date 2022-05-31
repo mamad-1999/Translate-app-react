@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { TranslateContext } from '../Context/ContextTranslate';
+import { ThemeContext } from '../Context/ContextTheme'
 import { IoMdMoon } from 'react-icons/io'
 import { BiSun } from 'react-icons/bi'
 import {
@@ -11,15 +11,15 @@ import {
 } from './Toggle-css'
 
 function Toggle() {
-    const { state, dispath } = useContext(TranslateContext);
+    const { stateTheme, dispathTheme } = useContext(ThemeContext);
 
     const toggleState = () => {
-        dispath({ type: "DARK_MODE" })
+        dispathTheme({ type: "DARK_MODE" })
     };
 
     return (
         <LabelToggle>
-            <ToggleItem isDark={state.isDark}>
+            <ToggleItem isDark={stateTheme.isDark}>
                 <IconToggleBox>
                     <Icon>
                         <BiSun />
@@ -29,7 +29,7 @@ function Toggle() {
                     </Icon>
                 </IconToggleBox>
                 <CheckBoxToggle
-                    checked={state.isDark}
+                    checked={stateTheme.isDark}
                     onChange={toggleState}
                 />
             </ToggleItem>
