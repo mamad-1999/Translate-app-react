@@ -11,6 +11,7 @@
 - Copy translate text
 - Sound Player (not Suppurt all language)
 - Support Farsi
+- Dark Mode
 
 ### API
 - [mymemory.translated](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjR6tSYh_r3AhWfgv0HHfyzA_IQFnoECAUQAQ&url=https%3A%2F%2Fmymemory.translated.net%2F&usg=AOvVaw1LzksgzZ-xHdkVqIvlvwIk)
@@ -51,6 +52,7 @@ npm start
 
 ```
 -------
-![Screenshot from 2022-05-25 11-22-02](https://user-images.githubusercontent.com/91375726/170198780-28d32ce0-1deb-49ac-944f-8de3bf1ea6c7.png)
+![Screenshot from 2022-06-01 12-05-59](https://user-images.githubusercontent.com/91375726/171352440-149b3b3c-effd-4a3b-8ba7-93b2762cd999.png)
+
 
 
