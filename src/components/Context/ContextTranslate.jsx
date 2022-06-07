@@ -25,6 +25,7 @@ const reducer = (state, action) => {
       };
     case "TEXT_FROM":
       state.textFrom = action.payload;
+      if (!state.textFrom) state.textTo = "";
       return {
         ...state
       };
