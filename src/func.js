@@ -7,9 +7,8 @@ const sound = (initialText, initialLang) => {
     if (initialText) {
         utterance = new SpeechSynthesisUtterance(initialText);
         utterance.lang = initialLang;
+        speechSynthesis.speak(utterance);
     }
-
-    speechSynthesis.speak(utterance);
 }
 
 export { copy, sound }
